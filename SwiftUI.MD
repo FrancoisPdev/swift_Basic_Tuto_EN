@@ -10,11 +10,17 @@
 
 # Start an basic hello world custom
 //
+
 //  SwiftUIView.swift
+
 //  exo_Swift
+
 //
+
 //  Created by PARENT François on 12/03/2020.
+
 //  Copyright © 2020 PARENT François. All rights reserved.
+
 //
 
 import SwiftUI
@@ -50,11 +56,17 @@ struct SwiftUIView_Previews: PreviewProvider {
 
 
 # Start a basic geometric in SwiftUI
+
 //
+
 //  SwiftUIView2.sfit.swift
+
 //  exo_Swift
+
 //
+
 //  Created by PARENT François on 12/03/2020.
+
 //  Copyright © 2020 PARENT François. All rights reserved.
 //
 
@@ -108,11 +120,17 @@ struct SwiftUIView2_sfit_Previews: PreviewProvider {
 
 
 //
+
 //  SwiftUIView3.swift
+
 //  exo_Swift
+
 //
+
 //  Created by PARENT François on 12/03/2020.
+
 //  Copyright © 2020 PARENT François. All rights reserved.
+
 //
 
 import SwiftUI
@@ -165,10 +183,15 @@ struct SwiftUIView3_Previews: PreviewProvider {
 
 
 //
+
 //  SwiftUIViewButton.swift
+
 //  exo_Swift
+
 //
+
 //  Created by PARENT François on 12/03/2020.
+
 //  Copyright © 2020 PARENT François. All rights reserved.
 //
 
