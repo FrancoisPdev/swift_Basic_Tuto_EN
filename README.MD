@@ -1,4 +1,5 @@
-# Start an basic hello world custom
+![Swift](https://miro.medium.com/max/2200/1*S4__g3knEbuuE6qHyWIbNQ.png)
+# Start an basic Hello World custom
 //
 
 //  SwiftUIView.swift
@@ -38,7 +39,7 @@ struct SwiftUIView_Previews: PreviewProvider {
 
 ***
 
-# Start a basic geometric in SwiftUI
+# Start a basic geometric build in SwiftUI
 
 //
 
@@ -149,7 +150,7 @@ struct SwiftUIView3_Previews: PreviewProvider {
 
 ***
 
-# Start an basic Button with SwiftUI
+# Start an basic Button and ramdom-quote with SwiftUI
 
 
 
@@ -204,11 +205,73 @@ struct SwiftUIViewButton_Previews: PreviewProvider {
         SwiftUIViewButton()
     }
 }
+
+***
+
+# Start a button background-color with SwiftUI
+//
+//  BackgroundColorSwipe.swift
+//  exo_Swift
+//
+//  Created by PARENT François on 12/03/2020.
+//  Copyright © 2020 PARENT François. All rights reserved.
+//
+
+import SwiftUI
+
+struct BackgroundColorSwipe: View {
+    
+    @State var swipe = Color.yellow
+    
+    var body: some View {
+        ZStack{
+            swipe.edgesIgnoringSafeArea(.all)
+            Spacer()
+                .frame(height: 600)
+            HStack{
+                Button("green",
+                       action: {
+                        self.swipe = Color.green
+                        
+                })
+                    .padding(10)
+                    .foregroundColor(Color.white)
+                    .background(Color.green)
+                    .cornerRadius(20)
+                Button("red",
+                       action: {
+                        self.swipe = Color.red
+                        
+                })
+                    .padding(10)
+                    .foregroundColor(Color.white)
+                    .background(Color.red)
+                    .cornerRadius(20)
+
+                Button("blue",
+                       action: {
+                        self.swipe = Color.blue
+                        
+                })
+                    .padding(10)
+                    .foregroundColor(Color.white)
+                    .background(Color.blue)
+                    .cornerRadius(20)
+            }
+        }
+    }
+}
+struct BackgroundColorSwipe_Previews: PreviewProvider {
+    static var previews: some View {
+        BackgroundColorSwipe()
+    }
+}
+
 /* ************************************************************** *
                                                                    
                                                                    
             Thank's for Watch'in web surfer                                             
-                                                                   
+Useful source from Github [here](https://github.com/SimpleBoilerplates/SwiftUI-Cheat-Sheet#button)
                                                                    
                                                                    
  **************************************************************** */
