@@ -8,7 +8,10 @@
 
 [Start a button background-color with SwiftUI](#start-a-button-background-color-with-swiftui)
 
+[Start build an control flow temperature with SwiftUI](#start-build-an-control-flow-temperature-with-swiftui)
+
 ![Swift](https://miro.medium.com/max/2200/1*S4__g3knEbuuE6qHyWIbNQ.png)
+
 # Start an basic Hello World custom
 //
 
@@ -278,9 +281,73 @@ struct BackgroundColorSwipe: View {
         }
     }
 }
+
 struct BackgroundColorSwipe_Previews: PreviewProvider {
     static var previews: some View {
         BackgroundColorSwipe()
+    }
+}
+
+***
+
+# Start build an control flow temperature with SwiftUI
+
+
+//
+
+//  Start_build_an_control_flow_temperature.swift
+
+//  exo_Swift
+
+//
+
+//  Created by PARENT François on 13/03/2020.
+
+//  Copyright © 2020 PARENT François. All rights reserved.
+
+//
+
+import SwiftUI
+
+struct Start_build_an_control_flow_temperature: View {
+    @State private var temperature: Double = 0.0
+    
+    var body: some View {
+        ZStack{
+            
+            RadialGradient(gradient: Gradient(colors: [.white, .yellow]), center: .center, startRadius: 50, endRadius: 350)
+                .edgesIgnoringSafeArea(.all)
+            if temperature >= 32 {
+                Color.red
+            }else {
+                Color.blue
+            }
+            
+            VStack{
+           
+            if temperature >= 32 {
+                    
+                Text("Ne sortez pas !").foregroundColor(.black)
+                    
+                }
+            else if temperature < -10 {
+                Text("Sortez et gelé !!")
+                
+            }else {
+                Text("il fait froid").foregroundColor(.black)
+            }
+            Text(" \(Int(temperature))°")
+                Slider(value: $temperature, in: -100...100, step: 1.0).padding(100).accentColor(.black)
+            
+            }
+            
+        }
+    }
+}
+
+struct Start_build_an_control_flow_temperature_Previews: PreviewProvider {
+    static var previews: some View {
+        Start_build_an_control_flow_temperature)
     }
 }
 
