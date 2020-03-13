@@ -315,12 +315,15 @@ struct Start_build_an_control_flow_temperature: View {
     var body: some View {
         ZStack{
             
-            RadialGradient(gradient: Gradient(colors: [.white, .yellow]), center: .center, startRadius: 50, endRadius: 350)
-                .edgesIgnoringSafeArea(.all)
-            if temperature >= 32 {
-                Color.red
+/*
+//            RadialGradient(gradient: Gradient(colors: [.white, .yellow]), center: .center, startRadius: 50, endRadius: 350)
+//                .edgesIgnoringSafeArea(.all)
+*/
+
+            if temperature > 20 {
+                Color.red.edgesIgnoringSafeArea(.all)
             }else {
-                Color.blue
+                Color.blue.edgesIgnoringSafeArea(.all)
             }
             
             VStack{
