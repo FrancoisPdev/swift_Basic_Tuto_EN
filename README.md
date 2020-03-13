@@ -288,7 +288,9 @@ struct BackgroundColorSwipe_Previews: PreviewProvider {
                                                                    
                                                                    
             Thank's for Watch'in web surfer                                             
-Useful source from Github [here](https://github.com/SimpleBoilerplates/SwiftUI-Cheat-Sheet#button)
+Useful source from :
+* Github [here](https://github.com/SimpleBoilerplates/SwiftUI-Cheat-Sheet#button)
+* YouTube [here](https://www.youtube.com/playlist?list=PLuoeXyslFTuZRi4q4VT6lZKxYbr7so1Mr)
                                                                    
                                                                    
  **************************************************************** */
