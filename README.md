@@ -10,22 +10,19 @@
 
 [Start build an control flow temperature with SwiftUI](#start-build-an-control-flow-temperature-with-swiftui)
 
+[Start build 3 custom buttons with compoment with SwiftUI](#start-build-3-custom-buttons-with-compoment-with-swiftui)
+
 ![Swift](https://miro.medium.com/max/2200/1*S4__g3knEbuuE6qHyWIbNQ.png)
 
 # Start an basic Hello World custom
-//
 
-//  SwiftUIView.swift
-
-//  exo_Swift
-
-//
-
-//  Created by PARENT François on 12/03/2020.
-
-//  Copyright © 2020 PARENT François. All rights reserved.
-
-//
+    //
+    //  SwiftUIView.swift
+    //  exo_Swift
+    //
+    //  Created by PARENT François on 12/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
 
 import SwiftUI
 
@@ -54,18 +51,13 @@ struct SwiftUIView_Previews: PreviewProvider {
 
 # Start a basic geometric build in SwiftUI
 
-//
-
-//  SwiftUIView2.sfit.swift
-
-//  exo_Swift
-
-//
-
-//  Created by PARENT François on 12/03/2020.
-
-//  Copyright © 2020 PARENT François. All rights reserved.
-//
+    //
+    //  SwiftUIView2.sfit.swift
+    //  exo_Swift
+    //
+    //  Created by PARENT François on 12/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
 
 import SwiftUI
 
@@ -110,19 +102,13 @@ struct SwiftUIView2_sfit_Previews: PreviewProvider {
 # Start a basic profil with SwiftUI
 
 
-//
-
-//  SwiftUIView3.swift
-
-//  exo_Swift
-
-//
-
-//  Created by PARENT François on 12/03/2020.
-
-//  Copyright © 2020 PARENT François. All rights reserved.
-
-//
+    //
+    //  SwiftUIView3.swift
+    //  exo_Swift
+    //
+    //  Created by PARENT François on 12/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
 
 import SwiftUI
 
@@ -167,18 +153,13 @@ struct SwiftUIView3_Previews: PreviewProvider {
 
 
 
-//
-
-//  SwiftUIViewButton.swift
-
-//  exo_Swift
-
-//
-
-//  Created by PARENT François on 12/03/2020.
-
-//  Copyright © 2020 PARENT François. All rights reserved.
-//
+    //
+    //  SwiftUIViewButton.swift
+    //  exo_Swift
+    //
+    //  Created by PARENT François on 12/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
 
 import SwiftUI
 
@@ -223,19 +204,13 @@ struct SwiftUIViewButton_Previews: PreviewProvider {
 
 # Start a button background-color with SwiftUI
 
-//
-
-//  BackgroundColorSwipe.swift
-
-//  exo_Swift
-
-//
-
-//  Created by PARENT François on 12/03/2020.
-
-//  Copyright © 2020 PARENT François. All rights reserved.
-
-//
+    //
+    //  BackgroundColorSwipe.swift
+    //  exo_Swift
+    //
+    //  Created by PARENT François on 12/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
 
 import SwiftUI
 
@@ -293,19 +268,13 @@ struct BackgroundColorSwipe_Previews: PreviewProvider {
 # Start build an control flow temperature with SwiftUI
 
 
-//
-
-//  Start_build_an_control_flow_temperature.swift
-
-//  exo_Swift
-
-//
-
-//  Created by PARENT François on 13/03/2020.
-
-//  Copyright © 2020 PARENT François. All rights reserved.
-
-//
+    //
+    //  Start_build_an_control_flow_temperature.swift
+    //  exo_Swift
+    //
+    //  Created by PARENT François on 13/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
 
 import SwiftUI
 
@@ -353,6 +322,79 @@ struct Start_build_an_control_flow_temperature_Previews: PreviewProvider {
         Start_build_an_control_flow_temperature)
     }
 }
+
+***
+
+# Start build 3 custom buttons with compoment with SwiftUI
+
+
+
+    //
+    //  trainningCompoment.swift
+    //  exo_Swift
+    //
+    //  Created by PARENT François on 13/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
+    
+    import SwiftUI
+    
+    struct trainningCompoment: View {
+        
+        var body: some View {
+            
+            ZStack{
+                
+                Color.yellow.edgesIgnoringSafeArea(.all)
+                
+                HStack{
+                    customButtons(
+                        customBackground: .red,
+                        customForeGround: .white,
+                        customImages: "play.rectangle.fill")
+                    customButtons(
+                        customBackground: .blue,
+                        customForeGround: .white,
+                        customImages: "paperplane")
+                    customButtons(
+                        customBackground: .green,
+                        customForeGround: .white,
+                        customImages: "smoke.fill"
+                    )
+                }
+            }
+        }
+    }
+    
+    struct customButtons: View {
+        
+        var customBackground: Color
+        var customForeGround: Color
+        var customImages: String
+        
+        var body: some View {
+            Button(action: {
+                
+            },
+                   label: {
+                    Image(systemName: "\(customImages)")
+                        .padding(20)
+                        .background(customBackground)
+                        .foregroundColor(customForeGround)
+                        .cornerRadius(12)
+                    
+            }
+            )
+        }
+    }
+    
+    struct trainningCompoment_Previews: PreviewProvider {
+        static var previews: some View {
+            trainningCompoment()
+        }
+    }
+
+
 
 /* ************************************************************** *
                                                                    
