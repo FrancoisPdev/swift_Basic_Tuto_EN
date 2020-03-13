@@ -219,12 +219,19 @@ struct SwiftUIViewButton_Previews: PreviewProvider {
 ***
 
 # Start a button background-color with SwiftUI
+
 //
+
 //  BackgroundColorSwipe.swift
+
 //  exo_Swift
+
 //
+
 //  Created by PARENT François on 12/03/2020.
+
 //  Copyright © 2020 PARENT François. All rights reserved.
+
 //
 
 import SwiftUI
