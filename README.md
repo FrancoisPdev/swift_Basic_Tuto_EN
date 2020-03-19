@@ -12,6 +12,8 @@
 
 [Start build 3 custom buttons with compoment with SwiftUI](#start-build-3-custom-buttons-with-compoment-with-swiftui)
 
+[Start simple Notifications view in SwiftUI](#start-simple-notifications-view-in-swiftui)
+
 ![Swift](https://miro.medium.com/max/2200/1*S4__g3knEbuuE6qHyWIbNQ.png)
 
 # Start an basic Hello World custom
@@ -394,6 +396,55 @@ struct Start_build_an_control_flow_temperature_Previews: PreviewProvider {
         }
     }
 
+***
+
+# Start simple Notifications view in SwiftUI 
+
+//
+//  notification.swift
+//  App
+//
+//  Created by PARENT François on 17/03/2020.
+//  Copyright © 2020 PARENT François. All rights reserved.
+//
+// La page fonctionne avec de la données brute, nous avons simulés une fausse BDD pour ensuite recuperer les informations.
+// plus bas, "notification_Previews" permet de tester les elements sur l'Iphone.
+// remplacer destination:Text("hello") par la page que vous voulez
+// remplacer destination:Text("hello")2 par la page que vous voulez aussi
+
+import SwiftUI
+
+struct notification: View {
+    
+    
+    var body: some View {
+        
+        VStack{
+            List {
+                ForEach(notifications){ notification in
+                    NavigationLink(destination: Text("hello")){
+                        Text(notification.invitation)
+                        
+                    }
+                    NavigationLink(destination: Text("Yé soui sénorita75 é lé paquito komé toé yé lé zaime")){
+                        Text(notification.request)
+                        
+                    }
+                }
+            }
+        }.navigationBarTitle("Notifications")
+    }
+}
+
+// test de navigation pour l'ecran notification
+
+struct notification_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView(){
+            notification()
+        }
+    }
+}
 
 
 /* ************************************************************** *
