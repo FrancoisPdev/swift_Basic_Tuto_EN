@@ -14,6 +14,8 @@
 
 [Start simple Notifications view in SwiftUI](#start-simple-notifications-view-in-swiftui)
 
+[Start simple Neumophisme Rectangle() in SwiftUI](start-simple-neumorphisme-rectangle()-in-swiftui)
+
 ![Swift](https://miro.medium.com/max/2200/1*S4__g3knEbuuE6qHyWIbNQ.png)
 
 # Start an basic Hello World custom
@@ -26,9 +28,9 @@
     //  Copyright © 2020 PARENT François. All rights reserved.
     //
 
-import SwiftUI
+    import SwiftUI
 
-struct SwiftUIView: View {
+    struct SwiftUIView: View {
     
     var body: some View {
         
@@ -43,11 +45,11 @@ struct SwiftUIView: View {
     }
 }
 
-struct SwiftUIView_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView()
+    struct SwiftUIView_Previews: PreviewProvider {
+        static var previews: some View {
+            SwiftUIView()
+        }
     }
-}
 
 ***
 
@@ -90,14 +92,14 @@ struct SwiftUIView2_sfit: View {
             
         }
         
+        }
     }
-}
 
-struct SwiftUIView2_sfit_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView2_sfit()
+    struct SwiftUIView2_sfit_Previews: PreviewProvider {
+        static var previews: some View {
+            SwiftUIView2_sfit()
+        }
     }
-}
 
 ***
 
@@ -142,12 +144,12 @@ struct SwiftUIView3: View {
     }
         
 
-}
-struct SwiftUIView3_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIView3()
     }
-}
+    struct SwiftUIView3_Previews: PreviewProvider {
+        static var previews: some View {
+            SwiftUIView3()
+        }
+    }
 
 ***
 
@@ -155,52 +157,52 @@ struct SwiftUIView3_Previews: PreviewProvider {
 
 
 
-    //
-    //  SwiftUIViewButton.swift
-    //  exo_Swift
-    //
-    //  Created by PARENT François on 12/03/2020.
-    //  Copyright © 2020 PARENT François. All rights reserved.
-    //
+        //
+        //  SwiftUIViewButton.swift
+        //  exo_Swift
+        //
+        //  Created by PARENT François on 12/03/2020.
+        //  Copyright © 2020 PARENT François. All rights reserved.
+        //
 
-import SwiftUI
+    import SwiftUI
 
-struct SwiftUIViewButton: View {
-    
-    
-    @State var random = "c ki?"
-    
-    let quotes = [
-    "Now is the time for all good men to come to the aid of their country",
-    "Vini, vidi, vichi",
-    "I regret that I have but one life to give for my country",
-    "Illegitimi non carborundum"
-    ]
-    
-    var body: some View {
-        VStack{
-            Text(random)
-            .font(.subheadline)
-            .foregroundColor(Color.green)
-            .lineSpacing(10)
-            .lineLimit(nil)
-            .padding(60)
-            Spacer().frame(height:40)
-            Button("Who is there", action: {
-                    self.random =
-                        self.quotes.randomElement()!
-                }
-                ).padding(20).background(Color.blue).foregroundColor(Color.white).cornerRadius(20)
+    struct SwiftUIViewButton: View {
+
+
+        @State var random = "c ki?"
+
+        let quotes = [
+        "Now is the time for all good men to come to the aid of their country",
+        "Vini, vidi, vichi",
+        "I regret that I have but one life to give for my country",
+        "Illegitimi non carborundum"
+        ]
+
+        var body: some View {
+            VStack{
+                Text(random)
+                .font(.subheadline)
+                .foregroundColor(Color.green)
+                .lineSpacing(10)
+                .lineLimit(nil)
+                .padding(60)
+                Spacer().frame(height:40)
+                Button("Who is there", action: {
+                        self.random =
+                            self.quotes.randomElement()!
+                    }
+                    ).padding(20).background(Color.blue).foregroundColor(Color.white).cornerRadius(20)
+            }
+        }
+
+
+    }
+    struct SwiftUIViewButton_Previews: PreviewProvider {
+        static var previews: some View {
+            SwiftUIViewButton()
         }
     }
-    
-
-}
-struct SwiftUIViewButton_Previews: PreviewProvider {
-    static var previews: some View {
-        SwiftUIViewButton()
-    }
-}
 
 ***
 
@@ -214,56 +216,56 @@ struct SwiftUIViewButton_Previews: PreviewProvider {
     //  Copyright © 2020 PARENT François. All rights reserved.
     //
 
-import SwiftUI
+    import SwiftUI
 
-struct BackgroundColorSwipe: View {
-    
-    @State var swipe = Color.yellow
-    
-    var body: some View {
-        ZStack{
-            swipe.edgesIgnoringSafeArea(.all)
-            Spacer()
-                .frame(height: 600)
-            HStack{
-                Button("green",
-                       action: {
-                        self.swipe = Color.green
-                        
-                })
-                    .padding(10)
-                    .foregroundColor(Color.white)
-                    .background(Color.green)
-                    .cornerRadius(20)
-                Button("red",
-                       action: {
-                        self.swipe = Color.red
-                        
-                })
-                    .padding(10)
-                    .foregroundColor(Color.white)
-                    .background(Color.red)
-                    .cornerRadius(20)
+    struct BackgroundColorSwipe: View {
 
-                Button("blue",
-                       action: {
-                        self.swipe = Color.blue
-                        
-                })
-                    .padding(10)
-                    .foregroundColor(Color.white)
-                    .background(Color.blue)
-                    .cornerRadius(20)
+        @State var swipe = Color.yellow
+
+        var body: some View {
+            ZStack{
+                swipe.edgesIgnoringSafeArea(.all)
+                Spacer()
+                    .frame(height: 600)
+                HStack{
+                    Button("green",
+                           action: {
+                            self.swipe = Color.green
+
+                    })
+                        .padding(10)
+                        .foregroundColor(Color.white)
+                        .background(Color.green)
+                        .cornerRadius(20)
+                    Button("red",
+                           action: {
+                            self.swipe = Color.red
+
+                    })
+                        .padding(10)
+                        .foregroundColor(Color.white)
+                        .background(Color.red)
+                        .cornerRadius(20)
+
+                    Button("blue",
+                           action: {
+                            self.swipe = Color.blue
+
+                    })
+                        .padding(10)
+                        .foregroundColor(Color.white)
+                        .background(Color.blue)
+                        .cornerRadius(20)
+                }
             }
         }
     }
-}
 
-struct BackgroundColorSwipe_Previews: PreviewProvider {
-    static var previews: some View {
-        BackgroundColorSwipe()
+    struct BackgroundColorSwipe_Previews: PreviewProvider {
+        static var previews: some View {
+            BackgroundColorSwipe()
+        }
     }
-}
 
 ***
 
@@ -278,52 +280,52 @@ struct BackgroundColorSwipe_Previews: PreviewProvider {
     //  Copyright © 2020 PARENT François. All rights reserved.
     //
 
-import SwiftUI
+    import SwiftUI
 
-struct Start_build_an_control_flow_temperature: View {
-    @State private var temperature: Double = 0.0
+    struct Start_build_an_control_flow_temperature: View {
+        @State private var temperature: Double = 0.0
     
     var body: some View {
         ZStack{
             
-/*
-//            RadialGradient(gradient: Gradient(colors: [.white, .yellow]), center: .center, startRadius: 50, endRadius: 350)
-//                .edgesIgnoringSafeArea(.all)
-*/
+    /*
+    //            RadialGradient(gradient: Gradient(colors: [.white, .yellow]), center: .center, startRadius: 50, endRadius: 350)
+    //                .edgesIgnoringSafeArea(.all)
+    */
 
-            if temperature > 20 {
-                Color.red.edgesIgnoringSafeArea(.all)
-            }else {
-                Color.blue.edgesIgnoringSafeArea(.all)
-            }
-            
-            VStack{
-           
-            if temperature >= 32 {
-                    
-                Text("Ne sortez pas !").foregroundColor(.black)
-                    
+                if temperature > 20 {
+                    Color.red.edgesIgnoringSafeArea(.all)
+                }else {
+                    Color.blue.edgesIgnoringSafeArea(.all)
                 }
-            else if temperature < -10 {
-                Text("Sortez et gelé !!")
-                
-            }else {
-                Text("il fait froid").foregroundColor(.black)
+
+                VStack{
+
+                if temperature >= 32 {
+
+                    Text("Ne sortez pas !").foregroundColor(.black)
+
+                    }
+                else if temperature < -10 {
+                    Text("Sortez et gelé !!")
+
+                }else {
+                    Text("il fait froid").foregroundColor(.black)
+                }
+                Text(" \(Int(temperature))°")
+                    Slider(value: $temperature, in: -100...100, step: 1.0).padding(100).accentColor(.black)
+
+                }
+
             }
-            Text(" \(Int(temperature))°")
-                Slider(value: $temperature, in: -100...100, step: 1.0).padding(100).accentColor(.black)
-            
-            }
-            
         }
     }
-}
 
-struct Start_build_an_control_flow_temperature_Previews: PreviewProvider {
-    static var previews: some View {
-        Start_build_an_control_flow_temperature)
+    struct Start_build_an_control_flow_temperature_Previews: PreviewProvider {
+        static var previews: some View {
+            Start_build_an_control_flow_temperature)
+        }
     }
-}
 
 ***
 
@@ -400,21 +402,21 @@ struct Start_build_an_control_flow_temperature_Previews: PreviewProvider {
 
 # Start simple Notifications view in SwiftUI 
 
-//
-//  notification.swift
-//  App
-//
-//  Created by PARENT François on 17/03/2020.
-//  Copyright © 2020 PARENT François. All rights reserved.
-//
-// La page fonctionne avec de la données brute, nous avons simulés une fausse BDD pour ensuite recuperer les informations.
-// plus bas, "notification_Previews" permet de tester les elements sur l'Iphone.
-// remplacer destination:Text("hello") par la page que vous voulez
-// remplacer destination:Text("hello")2 par la page que vous voulez aussi
+    //
+    //  notification.swift
+    //  App
+    //
+    //  Created by PARENT François on 17/03/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
+    // La page fonctionne avec de la données brute, nous avons simulés une fausse BDD pour ensuite recuperer les informations.
+    // plus bas, "notification_Previews" permet de tester les elements sur l'Iphone.
+    // remplacer destination:Text("hello") par la page que vous voulez
+    // remplacer destination:Text("hello")2 par la page que vous voulez aussi
 
-import SwiftUI
+    import SwiftUI
 
-struct notification: View {
+    struct notification: View {
     
     
     var body: some View {
@@ -436,15 +438,70 @@ struct notification: View {
     }
 }
 
-// test de navigation pour l'ecran notification
+    // test de navigation pour l'ecran notification
 
-struct notification_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView(){
-            notification()
+    struct notification_Previews: PreviewProvider {
+        static var previews: some View {
+            NavigationView(){
+                notification()
+            }
         }
     }
-}
+***
+
+# Start simple Neumophisme Rectangle() in SwiftUI
+
+    //
+    //  ContentView.swift
+    //  Neumorphism
+    //
+    //  Created by PARENT François on 05/05/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
+
+    import SwiftUI
+
+    struct ContentView: View {
+
+    var body: some View {
+    
+        ZStack {
+            Color.offWhite
+            RoundedRectangle(cornerRadius: 25)
+            .fill(Color.offWhite)
+            .frame(width: 300, height: 300)
+
+        }.shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+        .edgesIgnoringSafeArea(.all)
+        
+        
+    }
+    }
+
+    struct ContentView_Previews: PreviewProvider {
+
+    static var previews: some View {
+    
+        ContentView()
+    }
+    }
+
+###### W/ this other file in the same folder
+
+    //
+    //FileNeumorphism.swift
+    //  Neumorphism
+    //
+    //  Created by PARENT François on 05/05/2020.
+    //  Copyright © 2020 PARENT François. All rights reserved.
+    //
+
+    import SwiftUI
+
+    extension Color {
+    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
+    }
 
 
 /* ************************************************************** *
