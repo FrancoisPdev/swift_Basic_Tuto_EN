@@ -14,7 +14,7 @@
 
 [Start simple Notifications view in SwiftUI](#start-simple-notifications-view-in-swiftui)
 
-[Start simple Neumophisme Rectangle in SwiftUI](#start-simple-neumorphisme-rectangle-in-swiftui)
+[Start simple Neumorphisme Rectangle in SwiftUI](#start-simple-neumorphisme-rectangle-in-swiftui)
 
 ![Swift](https://miro.medium.com/max/2200/1*S4__g3knEbuuE6qHyWIbNQ.png)
 
@@ -449,7 +449,7 @@ struct SwiftUIView3: View {
     }
 ***
 
-# Start simple Neumophisme Rectangle in SwiftUI
+# Start simple Neumorphisme Rectangle in SwiftUI
 
     //
     //  ContentView.swift
